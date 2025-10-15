@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CamarVolt — Electronics</title>
+  <link rel="icon" href="CamarVolt-Logo-Transparent.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Início CamarVolt">
+        <img src="CamarVolt-Logo-Transparent.png" alt="" />
+        <span>CamarVolt</span>
+      </a>
+
+      <!-- Botão Hamburguer -->
+      <button class="hamb" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav class="nav" id="primary-nav">
+        <a href="#produto">Produto</a>
+        <a href="#ferramentas">Ferramentas</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#roadmap">Roadmap</a>
+        <!-- GitHub com logo -->
+        <a class="icon-btn" href="https://github.com/Jaissongroup" target="_blank" rel="noopener" aria-label="GitHub CamarVolt">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.73.5.98 5.25.98 11.52c0 4.85 3.15 8.96 7.52 10.41.55.1.75-.24.75-.53 0-.26-.01-1.14-.02-2.06-3.06.67-3.71-1.31-3.71-1.31-.5-1.28-1.22-1.62-1.22-1.62-.99-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.97 1.67 2.54 1.19 3.16.91.1-.71.38-1.19.69-1.46-2.44-.28-5.01-1.22-5.01-5.45 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.42.11-2.97 0 0 .93-.3 3.05 1.13a10.57 10.57 0 0 1 5.55 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.55.22 2.69.11 2.97.7.77 1.13 1.75 1.13 2.95 0 4.24-2.58 5.16-5.03 5.44.39.34.74 1.01.74 2.04 0 1.47-.01 2.65-.01 3.01 0 .29.2.63.76.52A10.54 10.54 0 0 0 23 11.52C23 5.25 18.27.5 12 .5z"/>
+          </svg>
+          <span class="hide-sm">GitHub</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="band">
+    <div class="container hero reveal">
+      <div class="hero-media">
+        <img class="hero-logo" src="CamarVolt-Logo-Transparent.png" alt="Logo CamarVolt">
+      </div>
+      <div class="hero-copy">
+        <h1 class="title-xl">
+          CamarVolt
+          <span class="title-accent">Electronics</span>
+        </h1>
+        <p class="lead">
+          Projeto universitário de <strong>IoT</strong>: tomada inteligente que mede consumo em tempo real e envia para um dashboard web. Preto, amarelo e dourado — performance com estilo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produto -->
+  <section class="band" id="produto">
+    <div class="container split reveal">
+      <div class="split-copy">
+        <h2 class="title-lg">Tomada medidora de gastos</h2>
+        <p>
+          Mede <em>tensão, corrente e potência</em>, calcula kWh e envia via Wi-Fi. Identifique desperdícios e reduza a conta. Dashboard limpo, dados úteis e alertas.
+        </p>
+      </div>
+      <div class="split-media">
+        <div class="ph-image" aria-label="placeholder"><span>Imagem do Produto 400×300</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ferramentas -->
+  <section class="band" id="ferramentas">
+    <div class="container reveal">
+      <h2 class="title-lg center">Ferramentas</h2>
+      <p class="muted center">Em breve: calculadora de resistor, divisores, LED, etc.</p>
+
+      <div class="cards">
+        <article class="card standby reveal"><h3>Calculadora de Resistores</h3><p>Em breve</p></article>
+        <article class="card standby reveal"><h3>Queda em LED</h3><p>Em breve</p></article>
+        <article class="card standby reveal"><h3>Divisor de Tensão</h3><p>Em breve</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipe -->
+  <section class="band" id="equipe">
+    <div class="container reveal">
+      <h2 class="title-lg center">Equipe CamarVolt</h2>
+
+      <div class="team">
+        <div class="member reveal">
+          <div class="avatar"></div><h4>Gustavo Henrique</h4>
+          <div class="social">
+            <a class="icon" href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm7.5 0h3.84v2.11h.05c.54-1.02 1.86-2.11 3.83-2.11 4.1 0 4.86 2.7 4.86 6.21V24h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.31 0-2.66 1.8-2.66 3.66V24h-4V8.5z"/></svg>
+            </a>
+            <a class="icon" href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.25.98 11.52c0 4.85 3.15 8.96 7.52 10.41.55.1.75-.24.75-.53 0-.26-.01-1.14-.02-2.06-3.06.67-3.71-1.31-3.71-1.31-.5-1.28-1.22-1.62-1.22-1.62-.99-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.97 1.67 2.54 1.19 3.16.91.1-.71.38-1.19.69-1.46-2.44-.28-5.01-1.22-5.01-5.45 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.42.11-2.97 0 0 .93-.3 3.05 1.13a10.57 10.57 0 0 1 5.55 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.55.22 2.69.11 2.97.7.77 1.13 1.75 1.13 2.95 0 4.24-2.58 5.16-5.03 5.44.39.34.74 1.01.74 2.04 0 1.47-.01 2.65-.01 3.01 0 .29.2.63.76.52A10.54 10.54 0 0 0 23 11.52C23 5.25 18.27.5 12 .5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="member reveal"><div class="avatar"></div><h4>Ícaro Botelho</h4><div class="social"><a class="icon" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm7.5 0h3.84v2.11h.05c.54-1.02 1.86-2.11 3.83-2.11 4.1 0 4.86 2.7 4.86 6.21V24h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.31 0-2.66 1.8-2.66 3.66V24h-4V8.5z"/></svg></a><a class="icon" href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.25.98 11.52c0 4.85 3.15 8.96 7.52 10.41.55.1.75-.24.75-.53 0-.26-.01-1.14-.02-2.06-3.06.67-3.71-1.31-3.71-1.31-.5-1.28-1.22-1.62-1.22-1.62-.99-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.97 1.67 2.54 1.19 3.16.91.1-.71.38-1.19.69-1.46-2.44-.28-5.01-1.22-5.01-5.45 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.42.11-2.97 0 0 .93-.3 3.05 1.13a10.57 10.57 0 0 1 5.55 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.55.22 2.69.11 2.97.7.77 1.13 1.75 1.13 2.95 0 4.24-2.58 5.16-5.03 5.44.39.34.74 1.01.74 2.04 0 1.47-.01 2.65-.01 3.01 0 .29.2.63.76.52A10.54 10.54 0 0 0 23 11.52C23 5.25 18.27.5 12 .5z"/></svg></a></div></div>
+
+        <div class="member reveal"><div class="avatar"></div><h4>Maruan Biasi</h4><div class="social"><a class="icon" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm7.5 0h3.84v2.11h.05c.54-1.02 1.86-2.11 3.83-2.11 4.1 0 4.86 2.7 4.86 6.21V24h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.31 0-2.66 1.8-2.66 3.66V24h-4V8.5z"/></svg></a><a class="icon" href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.25.98 11.52c0 4.85 3.15 8.96 7.52 10.41.55.1.75-.24.75-.53 0-.26-.01-1.14-.02-2.06-3.06.67-3.71-1.31-3.71-1.31-.5-1.28-1.22-1.62-1.22-1.62-.99-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.97 1.67 2.54 1.19 3.16.91.1-.71.38-1.19.69-1.46-2.44-.28-5.01-1.22-5.01-5.45 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.42.11-2.97 0 0 .93-.3 3.05 1.13a10.57 10.57 0 0 1 5.55 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.55.22 2.69.11 2.97.7.77 1.13 1.75 1.13 2.95 0 4.24-2.58 5.16-5.03 5.44.39.34.74 1.01.74 2.04 0 1.47-.01 2.65-.01 3.01 0 .29.2.63.76.52A10.54 10.54 0 0 0 23 11.52C23 5.25 18.27.5 12 .5z"/></svg></a></div></div>
+
+        <div class="member reveal"><div class="avatar"></div><h4>Rafael Pereira</h4><div class="social"><a class="icon" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm7.5 0h3.84v2.11h.05c.54-1.02 1.86-2.11 3.83-2.11 4.1 0 4.86 2.7 4.86 6.21V24h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.31 0-2.66 1.8-2.66 3.66V24h-4V8.5z"/></svg></a><a class="icon" href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.25.98 11.52c0 4.85 3.15 8.96 7.52 10.41.55.1.75-.24.75-.53 0-.26-.01-1.14-.02-2.06-3.06.67-3.71-1.31-3.71-1.31-.5-1.28-1.22-1.62-1.22-1.62-.99-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.97 1.67 2.54 1.19 3.16.91.1-.71.38-1.19.69-1.46-2.44-.28-5.01-1.22-5.01-5.45 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.42.11-2.97 0 0 .93-.3 3.05 1.13a10.57 10.57 0 0 1 5.55 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.55.22 2.69.11 2.97.7.77 1.13 1.75 1.13 2.95 0 4.24-2.58 5.16-5.03 5.44.39.34.74 1.01.74 2.04 0 1.47-.01 2.65-.01 3.01 0 .29.2.63.76.52A10.54 10.54 0 0 0 23 11.52C23 5.25 18.27.5 12 .5z"/></svg></a></div></div>
+
+        <div class="member reveal"><div class="avatar"></div><h4>Ricardo Falção</h4><div class="social"><a class="icon" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm7.5 0h3.84v2.11h.05c.54-1.02 1.86-2.11 3.83-2.11 4.1 0 4.86 2.7 4.86 6.21V24h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.31 0-2.66 1.8-2.66 3.66V24h-4V8.5z"/></svg></a><a class="icon" href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.25.98 11.52c0 4.85 3.15 8.96 7.52 10.41.55.1.75-.24.75-.53 0-.26-.01-1.14-.02-2.06-3.06.67-3.71-1.31-3.71-1.31-.5-1.28-1.22-1.62-1.22-1.62-.99-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.97 1.67 2.54 1.19 3.16.91.1-.71.38-1.19.69-1.46-2.44-.28-5.01-1.22-5.01-5.45 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.42.11-2.97 0 0 .93-.3 3.05 1.13a10.57 10.57 0 0 1 5.55 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.55.22 2.69.11 2.97.7.77 1.13 1.75 1.13 2.95 0 4.24-2.58 5.16-5.03 5.44.39.34.74 1.01.74 2.04 0 1.47-.01 2.65-.01 3.01 0 .29.2.63.76.52A10.54 10.54 0 0 0 23 11.52C23 5.25 18.27.5 12 .5z"/></svg></a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap / Entregas -->
+  <section class="band" id="roadmap">
+    <div class="container reveal">
+      <h2 class="title-lg center">Roadmap & Entregas</h2>
+      <p class="muted center">Linhas gerais — ajustamos conforme o semestre evolui.</p>
+
+      <ol class="timeline">
+        <li class="tl-item reveal">
+          <span class="tl-badge">1</span>
+          <div class="tl-card">
+            <h4>Prototipagem elétrica • Semana 1–3</h4>
+            <p>Sensores, medição AC e validação de leitura em bancada (SCT, burden, filtragem).</p>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <span class="tl-badge">2</span>
+          <div class="tl-card">
+            <h4>Firmware & Telemetria • Semana 4–6</h4>
+            <p>ESP + Wi-Fi, payload JSON, taxa de amostragem, buffers e envio ao servidor.</p>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <span class="tl-badge">3</span>
+          <div class="tl-card">
+            <h4>Backend & Banco • Semana 7–8</h4>
+            <p>API de ingestão, persistência de dados, autenticação básica.</p>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <span class="tl-badge">4</span>
+          <div class="tl-card">
+            <h4>Dashboard Web • Semana 9–10</h4>
+            <p>Gráficos em tempo real, relatórios e presets de tarifa.</p>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <span class="tl-badge">5</span>
+          <div class="tl-card">
+            <h4>Refino & Entrega • Semana 11–12</h4>
+            <p>Testes, UX, documentação e apresentação final.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="container">© 2025 CamarVolt — Projeto acadêmico.</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
