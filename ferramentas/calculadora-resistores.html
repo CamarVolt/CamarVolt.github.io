@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Calculadora de Resistores — CamarVolt</title>
   <link rel="icon" href="../CamarVolt-Logo-Transparent.png" />
+  <!-- estilos globais da landing -->
   <link rel="stylesheet" href="../styles.css" />
+  <!-- estilos específicos da calculadora -->
+  <link rel="stylesheet" href="calc-resistores.css" />
 </head>
 <body>
 
-  <!-- Header (mesmo da landing) -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="../index.html">
@@ -17,23 +20,97 @@
         <span>CamarVolt</span>
       </a>
       <nav class="nav">
-        <a href="../index.html#ferramentas">Voltar</a>
+        <a href="../index.html#ferramentas">Ferramentas</a>
+        <a href="../index.html#produto">Produto</a>
+        <a href="../index.html#equipe">Equipe</a>
       </nav>
     </div>
   </header>
 
-  <!-- Conteúdo temporário -->
+  <!-- Conteúdo -->
   <section class="band">
-    <div class="container center">
-      <h1 class="title-lg">Calculadora de Resistores</h1>
-      <p class="muted">Em breve: ferramenta completa para leitura e cálculo de faixas de cores de resistores.</p>
+
+    <div class="container calc-grid">
+      <!-- Painel esquerdo -->
+      <aside class="panel">
+        <h1 class="title-lg">Calculadora de Resistores</h1>
+        <p class="muted">Selecione as cores das faixas e veja o valor, tolerância e tempco (6 faixas).</p>
+
+        <div class="control">
+          <label for="bandsCount">Número de faixas</label>
+          <select id="bandsCount">
+            <option value="4">4 faixas</option>
+            <option value="5" selected>5 faixas</option>
+            <option value="6">6 faixas</option>
+          </select>
+        </div>
+
+        <div id="pickers" class="pickers">
+          <!-- pickers injetados por JS -->
+        </div>
+
+        <div class="actions">
+          <button id="btnDecode" class="btn-gold">Decodificar</button>
+          <button id="btnRandom" class="btn-ghost">Aleatório</button>
+        </div>
+
+        <p class="legend muted">Cores: preto, marrom, vermelho, laranja, amarelo, verde, azul, violeta, cinza, branco, ouro, prata, sem-faixa.</p>
+      </aside>
+
+      <!-- Painel direito -->
+      <main class="panel">
+        <div class="resistor-wrap">
+          <div class="resistor">
+            <div class="lead left"></div>
+            <div id="bandsPreview" class="bands-preview"></div>
+            <div class="lead right"></div>
+          </div>
+
+          <div class="readouts">
+            <div>
+              <div class="label">Valor</div>
+              <div id="outValue" class="read-val">—</div>
+              <div class="small muted">Min / Máx calculados via tolerância</div>
+            </div>
+            <div class="right">
+              <div class="label">Tolerância</div>
+              <div id="outTol" class="read-val">—</div>
+              <div class="small muted">Tempco (6 faixas)</div>
+              <div id="outTemp" class="small muted">—</div>
+            </div>
+          </div>
+
+          <div class="copy-row">
+            <button id="btnCopy" class="btn-ghost">Copiar valor</button>
+          </div>
+        </div>
+
+        <div class="result-cards">
+          <article class="metric">
+            <h3 class="muted">Interpretação</h3>
+            <div id="outInterpret" class="val">Informe as cores e pressione Decodificar.</div>
+          </article>
+
+          <article class="metric">
+            <h3 class="muted">Detalhes</h3>
+            <pre id="outDetails" class="small muted">—</pre>
+          </article>
+        </div>
+      </main>
     </div>
   </section>
+  <noscript>
+  <div style="color:#ccc;text-align:center;margin:60px 0;">
+    ⚠️ Ative o JavaScript para usar a Calculadora de Resistores CamarVolt.
+  </div>
+</noscript>
+
 
   <!-- Footer -->
   <footer class="foot">
     <div class="container">© 2025 CamarVolt — Projeto acadêmico.</div>
   </footer>
 
+  <script src="calc-resistores.js"></script>
 </body>
 </html>
