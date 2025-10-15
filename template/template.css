@@ -1,0 +1,103 @@
+/* barra de ações */
+.md-toolbar{
+  display:flex; justify-content:space-between; align-items:center;
+  gap:12px; margin:14px 0 18px;
+}
+.md-toolbar .btn-ghost, .md-toolbar .btn-gold{ padding:8px 12px; font-size:.9rem; }
+
+/* container do markdown */
+.markdown-body{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 22px;
+  background: linear-gradient(180deg,#0f1013,#0a0b0d);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  box-shadow: var(--accent-shadow);
+  color: #e9e9ea;
+}
+
+
+/* ======== ESTILO DOS BOTÕES CAMARVOLT ======== */
+
+/* botão base */
+.md-toolbar button,
+.md-toolbar a.btn-ghost,
+.md-toolbar a.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  user-select: none;
+}
+
+/* botão ghost (transparente) */
+.md-toolbar .btn-ghost {
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  color: #e9e9ea;
+  padding: 8px 14px;
+}
+.md-toolbar .btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  box-shadow: 0 0 10px rgba(245, 197, 66, 0.3);
+  transform: translateY(-1px);
+}
+
+/* botão dourado principal */
+.md-toolbar .btn-gold {
+  background: linear-gradient(90deg, #f5c542, #f9d976);
+  border: none;
+  color: #111;
+  padding: 8px 16px;
+  font-weight: 700;
+}
+.md-toolbar .btn-gold:hover {
+  box-shadow: 0 0 14px rgba(245, 197, 66, 0.45);
+  transform: translateY(-1px);
+}
+
+/* botão compacto */
+.md-toolbar .btn-sm {
+  padding: 6px 12px;
+  font-size: 0.88rem;
+}
+
+/* alinhamento geral da toolbar */
+.md-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0 18px;
+  flex-wrap: wrap;
+}
+
+.md-toolbar .left,
+.md-toolbar .right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
+/* estilos básicos de MD em dark */
+.markdown-body h1,.markdown-body h2,.markdown-body h3,
+.markdown-body h4,.markdown-body h5,.markdown-body h6{
+  margin: 1.2em 0 .6em; font-weight:800;
+}
+.markdown-body p{ line-height:1.7; margin:.8em 0; }
+.markdown-body code{ background:#17191f; border:1px solid #2a2a2a; border-radius:6px; padding:.15em .35em; }
+.markdown-body pre{ background:#0c0d10; border:1px solid #1a1a1a; border-radius:10px; padding:14px; overflow:auto; }
+.markdown-body pre code{ background:transparent; border:none; padding:0; }
+.markdown-body a{ color: var(--gold); text-decoration:none; }
+.markdown-body a:hover{ text-decoration:underline; }
+.markdown-body img{ max-width:100%; border-radius:8px; border:1px solid #2a2a2a; background:#0c0d10; }
+.markdown-body table{ border-collapse: collapse; width:100%; margin:1em 0; }
+.markdown-body th,.markdown-body td{ border:1px solid #2a2a2a; padding:8px 10px; }

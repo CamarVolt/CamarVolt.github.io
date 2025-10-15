@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Template — CamarVolt</title>
+  <link rel="icon" href="../CamarVolt-Logo-Transparent.png" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./template.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <img src="../CamarVolt-Logo-Transparent.png" alt="CamarVolt" />
+        <span>CamarVolt</span>
+      </a>
+      <nav class="nav">
+        <a href="../index.html#ferramentas">Ferramentas</a>
+        <a href="../index.html#produto">Produto</a>
+        <a href="../index.html#equipe">Equipe</a>
+        <a href="../index.html#roadmap">Roadmap</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo -->
+  <section class="band">
+    <div class="container">
+      <h1 class="title-lg center">Template do Projeto</h1>
+
+      <div class="md-toolbar">
+        <div class="left">
+          <button id="btnRefresh" class="btn-ghost">Atualizar</button>
+        </div>
+        <div class="right">
+          <a id="btnOpenRaw" class="btn-ghost" target="_blank" rel="noopener">Abrir RAW</a>
+          <a id="btnOpenGitHub" class="btn-gold" target="_blank" rel="noopener">Abrir no GitHub</a>
+        </div>
+      </div>
+
+      <article id="mdRoot" class="markdown-body">
+        <div class="muted" style="text-align:center">Carregando…</div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="container">© 2025 CamarVolt — Projeto acadêmico.</div>
+  </footer>
+
+  <script src="../main.js" defer></script>
+  <!-- libs leves para render e segurança -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js"></script>
+  <script src="./template.js"></script>
+</body>
+</html>

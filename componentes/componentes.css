@@ -1,0 +1,50 @@
+/* Página Componentes — estilos específicos */
+.comp-wrap{ display:grid; gap:22px; }
+
+/* grid auto-fit: centraliza e responde bem ao resize */
+.comp-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:18px;
+  justify-items:center;
+}
+
+/* card */
+.comp-card{
+  width:100%;
+  max-width:360px;
+  background:linear-gradient(180deg,#0f1013,#0a0b0d);
+  border:1px solid var(--stroke);
+  border-radius:var(--radius);
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  transition:.25s ease;
+}
+.comp-card:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in oklab,var(--gold)60%,var(--stroke));
+  box-shadow:var(--accent-shadow);
+}
+
+/* imagem */
+.comp-thumb{
+  width:100%;
+  height:180px;
+  border-radius:12px;
+  border:1px solid var(--stroke);
+  object-fit:contain;
+  background:#0c0d10;
+}
+
+/* textos */
+.comp-title{ font-size:1.2rem; margin:4px 0 0 0; }
+.comp-desc{ color:var(--muted); margin:0 }
+.comp-qty{ margin:2px 0 0 0; font-weight:800; letter-spacing:.3px; color:var(--gold); }
+.comp-line{ height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); opacity:.75 }
+
+/* mobile */
+@media (max-width:780px){
+  .comp-grid{ gap:16px; }
+}
