@@ -97,3 +97,12 @@ document.querySelectorAll('.reveal').forEach(el=> observer.observe(el));
   }
 })();
 
+// === Ativa a "linha de energia" só quando #roadmap está visível ===
+(function energyLineToggle(){
+  const tl = document.querySelector('.timeline');
+  if(!tl) return;
+  const io = new IntersectionObserver(([entry])=>{
+    tl.classList.toggle('flow', entry.isIntersecting);
+  }, { threshold: 0.12 });
+  io.observe(tl);
+})();

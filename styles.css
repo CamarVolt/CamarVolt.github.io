@@ -208,6 +208,48 @@ body{
   pointer-events:none;
 }
 
+/* ===== ENERGY LINE on the timeline ===== */
+.timeline{ position: relative }
+
+/* usamos uma única “espinha” contínua da timeline */
+.timeline::before{
+  content:"";
+  position:absolute; left:20px; top:0; bottom:0; width:2px;
+  background: linear-gradient(180deg, rgba(245,197,66,.55), rgba(255,211,90,.15));
+  border-radius:2px;
+  z-index:0;
+}
+
+/* partícula de energia que sobe (glow) */
+.timeline::after{
+  content:"";
+  position:absolute; left:18.5px; width:5px; height:75px;
+  top:100%;                                   /* começa fora da parte visível */
+  background:
+    radial-gradient(2px 32px at 50% 50%, rgba(255,245,180,.0) 0%,
+                    rgba(255,235,140,.55) 30%, rgba(245,197,66,.95) 55%,
+                    rgba(245,197,66,.30) 85%, rgba(0,0,0,0) 100%);
+  filter: blur(.2px);
+  box-shadow: 0 0 18px rgba(245,197,66,.55), 0 0 34px rgba(245,197,66,.30);
+  z-index:1;
+  animation: energyFlow 3.8s linear infinite;
+  opacity: .95;
+  animation-direction: reverse;
+
+}
+
+/* só anima quando a timeline está em viewport (classe aplicada via JS) */
+.timeline:not(.flow)::after{ animation-play-state: paused; opacity: 0; }
+
+/* keyframes: faz a partícula subir do final até antes do topo */
+@keyframes energyFlow{
+  0%   { top: 100%; }
+  100% { top: -64px; }
+}
+
+/* como agora temos uma espinha contínua, esconda a linha por-item */
+.tl-item::before{ background: transparent !important; }
+
 
 /* ===== Footer ===== */
 .foot{ padding:28px 0; color:var(--muted); text-align:center }
