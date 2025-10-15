@@ -281,3 +281,147 @@ body{
   .cards{ grid-template-columns:1fr }
   .team{ grid-template-columns:1fr 1fr }
 }
+
+/* ===== Ferramentas ===== */
+.tool-card{
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  padding:28px 22px;
+  border-radius:var(--radius);
+  background:linear-gradient(180deg,#0f1013,#0a0b0d);
+  border:1px solid var(--stroke);
+  transition:.25s ease;
+}
+
+.tool-card:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in oklab,var(--gold)60%,var(--stroke));
+  box-shadow:var(--accent-shadow);
+}
+
+.tool-thumb{
+  width:100px;
+  height:60px;
+  object-fit:cover;
+  border-radius:8px;
+  border:1px solid var(--stroke);
+  filter:brightness(0.9);
+}
+
+.btn-use{
+  background:linear-gradient(90deg,var(--gold-2),var(--gold));
+  color:#111;
+  font-weight:700;
+  border:none;
+  border-radius:9999px;
+  padding:8px 18px;
+  cursor:pointer;
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+
+.btn-use:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 18px rgba(245,197,66,.3);
+}
+
+/* ===== Ferramentas ===== */
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* auto-centraliza conforme adiciona */
+  gap:20px;
+  justify-items:center;   /* centraliza os cards em cada célula */
+}
+
+.tool-card{
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column;      /* texto em cima, imagem embaixo */
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  width:100%;
+  max-width:320px;            /* largura consistente e centrada */
+  padding:28px 22px;
+  border-radius:var(--radius);
+  background:linear-gradient(180deg,#0f1013,#0a0b0d);
+  border:1px solid var(--stroke);
+  transition:.25s ease;
+}
+.tool-card:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in oklab,var(--gold)60%,var(--stroke));
+  box-shadow:var(--accent-shadow);
+}
+
+.tool-card h3{
+  font-size:1.2rem;          /* texto um pouco maior */
+  text-align:center;
+  margin:6px 0 0 0;
+}
+
+.tool-thumb{
+  width:140px;
+  height:90px;
+  object-fit:contain;         /* mantém proporção do PNG */
+  background:transparent;
+  border:none;                /* sem borda para PNG sem fundo */
+  filter:none;
+  margin-top:4px;
+}
+
+.tool-card{
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  width:100%;
+  max-width:320px;
+  padding:28px 22px 36px; /* espaço extra pra linha */
+  border-radius:var(--radius);
+  background:linear-gradient(180deg,#0f1013,#0a0b0d);
+  border:1px solid var(--stroke);
+  transition:.25s ease;
+}
+.tool-card:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in oklab,var(--gold)60%,var(--stroke));
+  box-shadow:var(--accent-shadow);
+}
+
+.tool-card h3{
+  font-size:1.25rem;        /* título ligeiramente maior */
+  text-align:center;
+  margin:4px 0 0 0;
+}
+
+.tool-thumb{
+  width:160px;              /* imagem maior */
+  height:100px;
+  object-fit:contain;
+  background:transparent;
+  border:none;
+}
+
+.tool-hint{
+  color:var(--muted);
+  font-size:.75rem;
+  letter-spacing:.4px;
+  margin-top:4px;
+}
+
+.tool-line{
+  width:80%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin-top:3px;
+  opacity:.8;
+}
