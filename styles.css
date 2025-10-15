@@ -110,15 +110,104 @@ body{
 }
 .tl-badge{
   position:absolute; left:10px; top:0; width:22px; height:22px; border-radius:50%;
+  background: var(--bg);            /* <- muda aqui */
+  border:2px solid var(--gold);
+  color:#fff;                       /* <- texto branco para as futuras */
+  font-weight:800; font-size:.85rem; display:grid; place-items:center;
+  z-index:2;                        /* garante que cubra a linha */
+}
+.tl-badge.done{
   background: radial-gradient(circle at 30% 30%, var(--gold-2), var(--gold));
-  color:#111; font-weight:800; font-size:.85rem; display:grid; place-items:center;
+  color:#111; border-color: transparent;
   box-shadow: 0 6px 18px rgba(245,197,66,.35);
+}
+.tl-badge.current{
+  border-color: color-mix(in oklab, var(--gold) 85%, #fff);
+  box-shadow: 0 0 0 4px rgba(245,197,66,.10);
+}
+.tl-badge.current::after{
+  content:"AULA ATUAL";
+  position:absolute; left:28px; top:50%; transform:translateY(-50%);
+  font-size:.62rem; letter-spacing:.4px; font-weight:800;
+  color:var(--gold);
+  background: rgba(245,197,66,.10);
+  border:1px solid color-mix(in oklab, var(--gold) 45%, var(--stroke));
+  padding:2px 6px; border-radius:999px;
+  backdrop-filter: blur(3px);
 }
 .tl-card{
   background:linear-gradient(180deg,#0f1013,#0a0b0d); border:1px solid var(--stroke);
   border-radius:var(--radius); padding:16px 18px;
 }
 .tl-card h4{ margin:0 0 8px 0 } .tl-card p{ margin:0; color:var(--muted) }
+.tl-card{
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.tl-item:hover .tl-card{
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--gold) 38%, var(--stroke));
+  box-shadow: 0 10px 26px rgba(245,197,66,.10);
+}
+.tl-item:hover .tl-badge{
+  border-color: color-mix(in oklab, var(--gold) 90%, #fff);
+}
+
+/* --- AULA ATUAL: bolacha amarela grande no lado ESQUERDO --- */
+.tl-item{ position:relative; }               /* garante contexto p/ posicionamento */
+.tl-now{
+  position:absolute;
+  left:-125px;             /* mais afastado da linha */
+  top:5px;
+  min-width:110px;
+  height:36px;
+  border-radius:9999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(90deg, var(--gold-2), var(--gold));
+  color:#111;
+  font-weight:900;
+  font-size:.8rem;
+  letter-spacing:.6px;
+  padding:0 14px;
+  z-index:2;
+
+  /* glow mais bonito e chamativo */
+  box-shadow:
+    0 0 25px rgba(245,197,66,.45),
+    0 0 40px rgba(245,197,66,.25),
+    0 4px 10px rgba(0,0,0,.3);
+  transition: transform .2s ease, box-shadow .3s ease;
+}
+
+.tl-now:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 30px rgba(245,197,66,.55),
+    0 0 60px rgba(245,197,66,.3),
+    0 6px 12px rgba(0,0,0,.4);
+}
+
+@media (max-width:980px){
+  .tl-now{
+    left:-100px;
+    min-width:95px;
+    height:32px;
+    font-size:.75rem;
+  }
+}
+
+/* --- Badge de avaliação (N1/N2/N3) no CANTO DIREITO do card --- */
+.tl-card{ position:relative; }               /* para posicionar o selo dentro */
+.grade-badge{
+  position:absolute; right:-10px; top:-10px;
+  padding:6px 10px; border-radius:999px;
+  background: radial-gradient(circle at 30% 30%, var(--gold-2), var(--gold));
+  color:#111; font-weight:900; font-size:.75rem;
+  box-shadow: 0 10px 24px rgba(245,197,66,.28), 0 0 0 3px rgba(245,197,66,.12);
+  pointer-events:none;
+}
+
 
 /* ===== Footer ===== */
 .foot{ padding:28px 0; color:var(--muted); text-align:center }
